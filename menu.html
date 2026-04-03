@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Menu</title>
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="cart.css">
+<link rel="stylesheet" href="search.css">
+<link rel="stylesheet" href="menu.css">
+<link rel="stylesheet" href="footer.css">
 </head>
 <body>
    <header class="header">
@@ -19,8 +23,8 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="menu.html">Menu</a></li>
             <li><a href="service.html">Service</a></li>
-            <li><a href="#">Why Us?</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="whyus.html">Why Us?</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
         </ul>
     </nav>
     <!-- Order Button -->
@@ -43,9 +47,11 @@
    <video style="width: 100%; height: 300px; object-fit: cover; display: block;" src="pictures/123629-728697948_tiny.mp4" autoplay muted></video>
 
 <!-- HERO -->
+  <!-- HERO -->
+   <section id="menu">
 <section class="hero">
 <span style="color: red;text-shadow: 2px 3px 5px black;font-size: 50px;font-weight: bold;"> Explore </span>
- <span style="color: rgb(10, 10, 10);text-shadow: 2px 3px 5px rgb(242, 5, 5);font-size: 30px;font-weight: bold;margin-top:20px;">Our</span>
+ <span style="color: rgb(10, 10, 10);text-shadow: 2px 3px 5px rgb(242, 5, 5);font-size: 30px;font-weight: bold;margin-top:10px;padding: 20px;">Our</span>
   <span style="color: red;text-shadow: 2px 3px 5px black;font-size: 50px;font-weight: bold;">Menu</span>
 </section>
 
@@ -58,7 +64,7 @@
 </div>
 
 <!-- MENU -->
-<div class="menu-grid" id="menu">
+  <div class="menu-grid" id="menu">
       <div class="card item-list" data-category="nonveg" data-price="low">
             <img id="menu_image" src="pictures/chickenleg.png" alt="">
             <h3>chicken veg mix</h3>
@@ -67,7 +73,11 @@
     Crispy,
     breaded chicken strips
      </pre>
-        <div class="passage"><h5 class="price" >₹450</h5> <a href="">buy Now</a></div>
+        <div class="passage"><h5 class="price" >₹450</h5> <button onclick="Openorders(this)">Buy Now</button></div>
+      <div style="display:none;" class="openn">
+       <button onclick="addToCart(this)">Add to Cart</button>
+       <button onclick="openOrder()">Order Now</button>
+     </div>
     </div>
     
 <!-- 1 -->
@@ -78,7 +88,11 @@
 Crispy veg patty with
 fresh lettuce & sauce.
     </pre>
-    <div class="passage"><h5 class="price">₹200</h5><a href="">Buy Now</a></div>
+    <div class="passage"><h5 class="price">₹200</h5><button onclick="Openorders(this)">Buy Now</button></div>
+      <div style="display:none;" class="openn">
+       <button onclick="addToCart(this)">Add to Cart</button>
+       <button onclick="openOrder()">Order Now</button>
+     </div>
 </div>
 
 <!-- 2 -->
@@ -89,7 +103,11 @@ fresh lettuce & sauce.
 Soft paneer cubes in
 creamy tomato gravy.
     </pre>
-    <div class="passage"><h5 class="price">₹350</h5><a href="">Buy Now</a></div>
+    <div class="passage"><h5 class="price">₹350</h5><button onclick="Openorders(this)">Buy Now</button></div>
+      <div style="display:none;" class="openn">
+       <button onclick="addToCart(this)">Add to Cart</button>
+       <button onclick="openOrder()">Order Now</button>
+     </div>
 </div>
 
 <!-- 3 -->
@@ -100,7 +118,11 @@ creamy tomato gravy.
 Complete meal with
 roti, rice & curries.
     </pre>
-    <div class="passage"><h5 class="price">₹550</h5><a href="">Buy Now</a></div>
+    <div class="passage"><h5 class="price">₹550</h5><button onclick="Openorders(this)">Buy Now</button></div>
+      <div style="display:none;" class="openn">
+       <button onclick="addToCart(this)">Add to Cart</button>
+       <button onclick="openOrder()">Order Now</button>
+     </div>
 </div>
 
 <!-- 4 -->
@@ -111,7 +133,11 @@ roti, rice & curries.
 Golden fried chicken
 snack with dip.
     </pre>
-    <div class="passage"><h5 class="price">₹250</h5><a href="">Buy Now</a></div>
+    <div class="passage"><h5 class="price">₹250</h5><button onclick="Openorders(this)">Buy Now</button></div>
+      <div style="display:none;" class="openn">
+       <button onclick="addToCart(this)">Add to Cart</button>
+       <button onclick="openOrder()">Order Now</button>
+     </div>
 </div>
 
 <!-- 5 -->
@@ -122,7 +148,11 @@ snack with dip.
 Flavorful rice with
 tender chicken pieces.
     </pre>
-    <div class="passage"><h5 class="price">₹450</h5><a href="">Buy Now</a></div>
+    <div class="passage"><h5 class="price">₹450</h5><button onclick="Openorders(this)">Buy Now</button></div>
+      <div style="display:none;" class="openn">
+       <button onclick="addToCart(this)">Add to Cart</button>
+       <button onclick="openOrder()">Order Now</button>
+     </div>
 </div>
 
 <!-- 6 -->
@@ -133,7 +163,11 @@ tender chicken pieces.
 Juicy grilled chicken
 with herbs & spices.
     </pre>
-    <div class="passage"><h5 class="price">₹650</h5><a href="">Buy Now</a></div>
+    <div class="passage"><h5 class="price">₹650</h5><button onclick="Openorders(this)">Buy Now</button></div>
+      <div style="display:none;" class="openn">
+       <button onclick="addToCart(this)">Add to Cart</button>
+       <button onclick="openOrder()">Order Now</button>
+     </div>
 </div>
 
 <!-- 7 -->
@@ -144,7 +178,11 @@ with herbs & spices.
 Mix of veg & chicken
 in soft tortilla.
     </pre>
-    <div class="passage"><h5 class="price">₹280</h5><a href="">Buy Now</a></div>
+    <div class="passage"><h5 class="price">₹280</h5><button onclick="Openorders(this)">Buy Now</button></div>
+      <div style="display:none;" class="openn">
+       <button onclick="addToCart(this)">Add to Cart</button>
+       <button onclick="openOrder()">Order Now</button>
+     </div>
 </div>
 
 <!-- 8 -->
@@ -155,7 +193,11 @@ in soft tortilla.
 Burger, fries &
 chicken bites.
     </pre>
-    <div class="passage"><h5 class="price">₹480</h5><a href="">Buy Now</a></div>
+    <div class="passage"><h5 class="price">₹480</h5><button onclick="Openorders(this)">Buy Now</button></div>
+      <div style="display:none;" class="openn">
+       <button onclick="addToCart(this)">Add to Cart</button>
+       <button onclick="openOrder()">Order Now</button>
+     </div>
 </div>
 
 <!-- 9 -->
@@ -166,7 +208,11 @@ chicken bites.
 Veg + non-veg full
 family meal combo.
     </pre>
-    <div class="passage"><h5 class="price">₹750</h5><a href="">Buy Now</a></div>
+    <div class="passage"><h5 class="price">₹750</h5><button onclick="Openorders(this)">Buy Now</button></div>
+      <div style="display:none;" class="openn">
+       <button onclick="addToCart(this)">Add to Cart</button>
+       <button onclick="openOrder()">Order Now</button>
+     </div>
 </div>
 
 <!-- 10 -->
@@ -177,7 +223,11 @@ family meal combo.
 Loaded with fresh
 veggies & cheese.
     </pre>
-    <div class="passage"><h5 class="price">₹400</h5><a href="">Buy Now</a></div>
+    <div class="passage"><h5 class="price">₹400</h5><button onclick="Openorders(this)">Buy Now</button></div>
+      <div style="display:none;" class="openn">
+       <button onclick="addToCart(this)">Add to Cart</button>
+       <button onclick="openOrder()">Order Now</button>
+     </div>
 </div>
 <!-- 11 -->
 <div class="card item-list" data-category="veg" data-price="low">
@@ -187,7 +237,11 @@ veggies & cheese.
 Crispy fried snack
 filled with spicy potato.
     </pre>
-    <div class="passage"><h5 class="price">₹100</h5><a href="">Buy Now</a></div>
+    <div class="passage"><h5 class="price">₹100</h5><button onclick="Openorders(this)">Buy Now</button></div>
+      <div style="display:none;" class="openn">
+       <button onclick="addToCart(this)">Add to Cart</button>
+       <button onclick="openOrder()">Order Now</button>
+     </div>
 </div>
 
 <!-- 12 -->
@@ -198,7 +252,11 @@ filled with spicy potato.
 Stir-fried noodles
 with fresh vegetables.
     </pre>
-    <div class="passage"><h5 class="price">₹300</h5><a href="">Buy Now</a></div>
+    <div class="passage"><h5 class="price">₹300</h5><button onclick="Openorders(this)">Buy Now</button></div>
+      <div style="display:none;" class="openn">
+       <button onclick="addToCart(this)">Add to Cart</button>
+       <button onclick="openOrder()">Order Now</button>
+     </div>
 </div>
 
 <!-- 13 -->
@@ -209,7 +267,11 @@ with fresh vegetables.
 Paneer dish with roti,
 rice & salad combo.
     </pre>
-    <div class="passage"><h5 class="price">₹600</h5><a href="">Buy Now</a></div>
+    <div class="passage"><h5 class="price">₹600</h5><button onclick="Openorders(this)">Buy Now</button></div>
+      <div style="display:none;" class="openn">
+       <button onclick="addToCart(this)">Add to Cart</button>
+       <button onclick="openOrder()">Order Now</button>
+     </div>
 </div>
 
 <!-- 14 -->
@@ -220,7 +282,11 @@ rice & salad combo.
 Soft roll filled with
 egg & spicy sauce.
     </pre>
-    <div class="passage"><h5 class="price">₹150</h5><a href="">Buy Now</a></div>
+    <div class="passage"><h5 class="price">₹150</h5><button onclick="Openorders(this)">Buy Now</button></div>
+      <div style="display:none;" class="openn">
+       <button onclick="addToCart(this)">Add to Cart</button>
+       <button onclick="openOrder()">Order Now</button>
+     </div>
 </div>
 
 <!-- 15 -->
@@ -231,7 +297,11 @@ egg & spicy sauce.
 Deep fried chicken
 with crunchy coating.
     </pre>
-    <div class="passage"><h5 class="price">₹400</h5><a href="">Buy Now</a></div>
+    <div class="passage"><h5 class="price">₹400</h5><button onclick="Openorders(this)">Buy Now</button></div>
+      <div style="display:none;" class="openn">
+       <button onclick="addToCart(this)">Add to Cart</button>
+       <button onclick="openOrder()">Order Now</button>
+     </div>
 </div>
 
 <!-- 16 -->
@@ -242,7 +312,11 @@ with crunchy coating.
 Tender mutton cooked
 in spicy masala gravy.
     </pre>
-    <div class="passage"><h5 class="price">₹700</h5><a href="">Buy Now</a></div>
+    <div class="passage"><h5 class="price">₹700</h5><button onclick="Openorders(this)">Buy Now</button></div>
+      <div style="display:none;" class="openn">
+       <button onclick="addToCart(this)">Add to Cart</button>
+       <button onclick="openOrder()">Order Now</button>
+     </div>
 </div>
 
 <!-- 17 -->
@@ -253,7 +327,11 @@ in spicy masala gravy.
 Veg & chicken layered
 grilled sandwich.
     </pre>
-    <div class="passage"><h5 class="price">₹220</h5><a href="">Buy Now</a></div>
+    <div class="passage"><h5 class="price">₹220</h5><button onclick="Openorders(this)">Buy Now</button></div>
+      <div style="display:none;" class="openn">
+       <button onclick="addToCart(this)">Add to Cart</button>
+       <button onclick="openOrder()">Order Now</button>
+     </div>
 </div>
 
 <!-- 18 -->
@@ -264,7 +342,11 @@ grilled sandwich.
 Fries, nuggets &
 veg rolls combo.
     </pre>
-    <div class="passage"><h5 class="price">₹420</h5><a href="">Buy Now</a></div>
+    <div class="passage"><h5 class="price">₹420</h5><button onclick="Openorders(this)">Buy Now</button></div>
+      <div style="display:none;" class="openn">
+       <button onclick="addToCart(this)">Add to Cart</button>
+       <button onclick="openOrder()">Order Now</button>
+     </div>
 </div>
 
 <!-- 19 -->
@@ -275,7 +357,11 @@ veg rolls combo.
 Large combo for 4
 with veg & non-veg.
     </pre>
-    <div class="passage"><h5 class="price">₹900</h5><a href="">Buy Now</a></div>
+    <div class="passage"><h5 class="price">₹900</h5><button onclick="Openorders(this)">Buy Now</button></div>
+      <div style="display:none;" class="openn">
+       <button onclick="addToCart(this)">Add to Cart</button>
+       <button onclick="openOrder()">Order Now</button>
+     </div>
 </div>
 
 <!-- 20 -->
@@ -286,203 +372,319 @@ with veg & non-veg.
 Crispy dosa filled
 with potato masala.
     </pre>
-    <div class="passage"><h5 class="price">₹250</h5><a href="">Buy Now</a></div>
+    <div class="passage"><h5 class="price">₹250</h5><button onclick="Openorders(this)">Buy Now</button></div>
+      <div style="display:none;" class="openn">
+       <button onclick="addToCart(this)">Add to Cart</button>
+       <button onclick="openOrder()">Order Now</button>
+     </div>
 </div>
 </div>
+</section>
+
 <section class="price-filter-section">
     <h2 style="text-align:center;">Filter by Price</h2>
-
     <div class="filters ">
         <button onclick="filterPrice('all')">All</button>
         <button onclick="filterPrice('low')">Below ₹300</button>
         <button onclick="filterPrice('mid')">₹300 - ₹500</button>
         <button onclick="filterPrice('high')">Above ₹500</button>
     </div>
-
-    <div class="menu-grid price" id="price-menu">
-
-
-<!-- 1 -->
-   <div class="card item-list" data-category="nonveg" data-price="low">
-    <img class="menu_image" src="pictures/chickenleg.png">
-    <h4>Chicken Strips</h4>
-    <p>Crispy & crunchy bites</p>
-    <h2 class="price">₹250</h2>
-    <button>Buy Now</button>
-</div>
+<div class="menu-grid price" id="price-menu">
+       <!-- 1 -->
+       <div class="card item-list" data-category="nonveg" data-price="low">
+             <img class="menu_image" src="pictures/chickenleg.png">
+             <h3 class="names">Chicken Strips</h3>
+             <p>Crispy & crunchy bites</p>
+             <h5  class="prices price">₹250</h5>
+             <button class="btnnn" onclick="Openorders(this)">Buy Now</button>
+            <div style="display:none;" class="openn">
+              <button onclick="addToCart(this)">Add to Cart</button>
+              <button onclick="openOrder()">Order Now</button>
+            </div>
+       </div>
 
 <!-- 2 -->
 <div class="card item-list" data-category="veg" data-price="low">
     <img class="menu_image" src="pictures/burger.png">
-    <h4>Veg Burger</h4>
+    <h3 class="names">Veg Burger</h3>
     <p>Yummy & tasty snack</p>
-    <h2 class="price">₹200</h2>
-    <button>Buy Now</button>
+    <h5 class="prices price">₹200</h5>
+     <button class="btnnn" onclick="Openorders(this)">Buy Now</button>
+      <div style="display:none;" class="openn">
+       <button onclick="addToCart(this)">Add to Cart</button>
+       <button onclick="openOrder()">Order Now</button>
 </div>
-
+ </div>
 <!-- 3 -->
 <div class="card item-list" data-category="veg" data-price="mid">
     <img class="menu_image" src="pictures/paneer.png">
-    <h4>Paneer Masala</h4>
+    <h3 class="names">Paneer Masala</h3>
     <p>Rich creamy gravy</p>
-    <h2 class="price">₹350</h2>
-    <button>Buy Now</button>
+    <h5  class="prices price">₹350</h5>
+    <button class="btnnn" onclick="Openorders(this)">Buy Now</button>
+      <div style="display:none;" class="openn">
+       <button onclick="addToCart(this)">Add to Cart</button>
+       <button onclick="openOrder()">Order Now</button>
 </div>
-
+ </div>
 <!-- 4 -->
 <div class="card item-list" data-category="veg" data-price="high">
     <img class="menu_image" src="pictures/foodplate.jpg">
-    <h4>Veg Thali</h4>
+<h3 class="names">Veg Thali</h3>
     <p>Complete full meal</p>
-    <h2 class="price">₹550</h2>
-    <button>Buy Now</button>
+  <h5  class="prices price">₹550</h5>
+    <button class="btnnn" onclick="Openorders(this)">Buy Now</button>
+      <div style="display:none;" class="openn">
+       <button onclick="addToCart(this)">Add to Cart</button>
+       <button onclick="openOrder()">Order Now</button>
 </div>
-
+ </div>
 <!-- 5 -->
 <div class="card item-list" data-category="nonveg" data-price="low">
     <img class="menu_image" src="pictures/chickennugget.jpg">
-    <h4>Chicken Nuggets</h4>
+    <h3 class="names">Chicken Nuggets</h3>
     <p>Crunchy fried snack</p>
-    <h2 class="price">₹250</h2>
-    <button>Buy Now</button>
+    <h5  class="prices price">₹250</h5>
+     <button class="btnnn" onclick="Openorders(this)">Buy Now</button>
+      <div style="display:none;" class="openn">
+       <button onclick="addToCart(this)">Add to Cart</button>
+       <button onclick="openOrder()">Order Now</button>
 </div>
-
+ </div>
 <!-- 6 -->
 <div class="card item-list" data-category="nonveg" data-price="mid">
     <img class="menu_image" src="pictures/foodplate1.png">
-    <h4>Chicken Biryani</h4>
+    <h3 class="names">Chicken Biryani</h3>
     <p>Spicy flavorful rice</p>
-    <h2 class="price">₹450</h2>
-    <button>Buy Now</button>
+    <h5  class="prices price">₹450</h5>
+    <button class="btnnn" onclick="Openorders(this)">Buy Now</button>
+      <div style="display:none;" class="openn">
+       <button onclick="addToCart(this)">Add to Cart</button>
+       <button onclick="openOrder()">Order Now</button>
 </div>
-
+ </div>
 <!-- 7 -->
 <div class="card item-list" data-category="nonveg" data-price="high">
     <img class="menu_image" src="pictures/grilledchicken.jpg">
-    <h4>Grilled Chicken</h4>
+    <h3 class="names">Grilled Chicken</h3>
     <p>Juicy smoky taste</p>
-    <h2 class="price">₹650</h2>
-    <button>Buy Now</button>
+    <h5  class="prices price">₹650</h5>
+    <button class="btnnn" onclick="Openorders(this)">Buy Now</button>
+      <div style="display:none;" class="openn">
+       <button onclick="addToCart(this)">Add to Cart</button>
+       <button onclick="openOrder()">Order Now</button>
 </div>
-
+ </div>
 <!-- 8 -->
 <div class="card item-list" data-category="mix" data-price="low">
     <img class="menu_image" src="pictures/vegchicken.jpg">
-    <h4>Veg Chicken Wrap</h4>
+    <h3 class="names">Veg Chicken Wrap</h3>
     <p>Perfect combo wrap</p>
-    <h2 class="price">₹280</h2>
-    <button>Buy Now</button>
+    <h5  class="prices price">₹280</h5>
+    <button class="btnnn" onclick="Openorders(this)">Buy Now</button>
+      <div style="display:none;" class="openn">
+       <button onclick="addToCart(this)">Add to Cart</button>
+       <button onclick="openOrder()">Order Now</button>
 </div>
-
+ </div>
 <!-- 9 -->
 <div class="card item-list" data-category="mix" data-price="mid">
     <img class="menu_image" src="pictures/OIP.jpg">
-    <h4>Combo Meal</h4>
+    <h3 class="names">Combo Meal</h3>
     <p>Burger + fries combo</p>
-    <h2 class="price">₹480</h2>
-    <button>Buy Now</button>
+    <h5  class="prices price">₹480</h5>
+    <button class="btnnn" onclick="Openorders(this)">Buy Now</button>
+      <div style="display:none;" class="openn">
+       <button onclick="addToCart(this)">Add to Cart</button>
+       <button onclick="openOrder()">Order Now</button>
 </div>
+ </div>
 
 <!-- 10 -->
 <div class="card item-list" data-category="mix" data-price="high">
     <img class="menu_image" src="pictures/familypack.webp">
-    <h4>Family Pack</h4>
+    <h3 class="names">Family Pack</h3>
     <p>Big meal for family</p>
-    <h2 class="price">₹750</h2>
-    <button>Buy Now</button>
+    <h5  class="prices price">₹750</h5>
+    <button class="btnnn" onclick="Openorders(this)">Buy Now</button>
+      <div style="display:none;" class="openn">
+       <button onclick="addToCart(this)">Add to Cart</button>
+       <button onclick="openOrder()">Order Now</button>
 </div>
+ </div>
 <!-- 11 -->
 <div class="card item-list" data-category="veg" data-price="low">
     <img id="menu_image" src="pictures/samosa.jpg">
-    <h4>Samosa</h4>
+    <h3 class="names">Samosa</h3>
     <p>Street Snack</p>
-    <h2 class="price">₹100</h2>
-    <button>Buy Now</button>
+   <h5  class="prices price">₹100</h5>
+    <button class="btnnn" onclick="Openorders(this)">Buy Now</button>
+      <div style="display:none;" class="openn">
+       <button onclick="addToCart(this)">Add to Cart</button>
+       <button onclick="openOrder()">Order Now</button>
 </div>
-
+ </div>
 <!-- 12 -->
 <div class="card item-list" data-category="veg" data-price="mid">
     <img id="menu_image" src="pictures/noodles.jpg">
-    <h4>Veg Noodles</h4>
+    <h3 class="names">Veg Noodles</h3>
     <p>Quick Meal</p>>
-   <h2 class="price">₹300</h2>
-   <button>Buy Now</button>
+   <h5  class="prices price">₹300</h5>
+     <button class="btnnn" onclick="Openorders(this)">Buy Now</button>
+      <div style="display:none;" class="openn">
+       <button onclick="addToCart(this)">Add to Cart</button>
+       <button onclick="openOrder()">Order Now</button>
 </div>
-
+ </div>
 <!-- 13 -->
 <div class="card item-list" data-category="veg" data-price="high">
-    <img id="menu_image" src="pictures/paneercombo.jpg">
-    <h4>Paneer Combo</h4>
+    <img style="width: 160px;height: 180px;" id="menu_image" src="pictures/paneercombo.jpg">
+    <h3 class="names">Paneer Combo</h3>
     <p>Deluxe Plate</p>
-    <h2 class="price">₹600</h2>
-    <button>Buy Now</button>
+    <h5  class="prices price">₹600</h5>
+    <button class="btnnn" onclick="Openorders(this)">Buy Now</button>
+      <div style="display:none;" class="openn">
+       <button onclick="addToCart(this)">Add to Cart</button>
+       <button onclick="openOrder()">Order Now</button>
 </div>
-
+ </div>
 <!-- 14 -->
 <div class="card item-list" data-category="nonveg" data-price="low">
     <img id="menu_image" src="pictures/eggroll.jpg">
-    <h4>Egg Roll</h4>
+    <h3 class="names">Egg Roll</h3>
     <p>Quick Bite</p>
-    <h2 class="price">₹150</h2>
-    <button>Buy Now</button>
+    <h5  class="prices price">₹150</h5>
+    <button class="btnnn" onclick="Openorders(this)">Buy Now</button>
+      <div style="display:none;" class="openn">
+       <button onclick="addToCart(this)">Add to Cart</button>
+       <button onclick="openOrder()">Order Now</button>
 </div>
-
+ </div>
 <!-- 15 -->
 <div class="card item-list" data-category="nonveg" data-price="mid">
-    <img id="menu_image" src="pictures/friedchicken.jpg">
-    <h4>Fried Chicken</h4>
+    <img  id="menu_image" src="pictures/friedchicken.jpg">
+    <h3 class="names">Fried Chicken</h3>
     <p>Crispy Treat</p>
-    <h2 class="price">₹400</h2>
-    <button>Buy Now</button>
+    <h5  class="prices price">₹400</h5>
+    <button class="btnnn" onclick="Openorders(this)">Buy Now</button>
+      <div style="display:none;" class="openn">
+       <button onclick="addToCart(this)">Add to Cart</button>
+       <button onclick="openOrder()">Order Now</button>
 </div>
-
+ </div>
 <!-- 16 -->
 <div class="card item-list" data-category="nonveg" data-price="high">
-    <img id="menu_image" src="pictures/muttoncurry.png">
-    <h4>Mutton Curry</h4>
+    <img style="width: 160px;height: 180px;" id="menu_image" src="pictures/muttoncurry.png">
+    <h3 class="names">Mutton Curry</h3>
     <p>Rich Flavor</p>
-   <h2 class="price">₹700</h2>
-   <button>Buy Now</button>
-</div>
+   <h5  class="prices price">₹700</h5>
+    <button class="btnnn" onclick="Openorders(this)">Buy Now</button>
+      <div style="display:none;" class="openn">
+       <button onclick="addToCart(this)">Add to Cart</button>
+       <button onclick="openOrder()">Order Now</button>
+    </div>
+ </div>
 
 <!-- 17 -->
 <div class="card item-list" data-category="mix" data-price="low">
     <img id="menu_image" src="pictures/mixsandwich.png">
-    <h4>Mix Sandwich</h4>
+    <h3 class="names">Mix Sandwich</h3>
     <p>Fusion Bite</p>
-    <h2 class="price">₹220</h2>
-    <button>Buy Now</button>
+    <h5  class="prices price">₹220</h5>
+    <button class="btnnn" onclick="Openorders(this)">Buy Now</button>
+      <div style="display:none;" class="openn">
+       <button onclick="addToCart(this)">Add to Cart</button>
+       <button onclick="openOrder()">Order Now</button>
+     </div>
 </div>
 
 <!-- 18 -->
 <div class="card item-list" data-category="mix" data-price="mid">
     <img id="menu_image" src="pictures/snackbox.jpg">
-    <h4>Snack Combo</h4>
+    <h3 class="names">Snack Combo</h3>
     <p><span>Snack Box</p>
-    <h2 class="price">₹420</h2>
-    <button>Buy Now</button>
+    <h5  class="prices price">₹420</h5>
+    <button class="btnnn" onclick="Openorders(this)">Buy Now</button>
+      <div style="display:none;" class="openn">
+       <button onclick="addToCart(this)">Add to Cart</button>
+       <button onclick="openOrder()">Order Now</button>
+     </div>
 </div>
 
 <!-- 19 -->
-<div class="card item-list" data-category="mix" data-price="high">
-    <img id="menu_image" src="pictures/partymeal.jpg">
-    <h4>Party Meal</h4>
-    <p>Group Feast</p>
-<h2 class="price">₹900</h2>
-<button>Buy Now</button>
-</div>
-
+    <div class="card item-list" data-category="mix" data-price="high">
+      <img style="width: 160px;height: 180px;" id="menu_image" src="pictures/partymeal.jpg">
+      <h3 class="names">Party Meal</h3>
+      <p>Group Feast</p>
+      <h5  class="prices price">₹900</h5>
+      <button class="btnnn" onclick="Openorders(this)">Buy Now</button>
+      <div style="display:none;" class="openn">
+         <button onclick="addToCart(this)">Add to Cart</button>
+          <button onclick="openOrder()">Order Now</button>
+      </div>
+    </div>
 <!-- 20 -->
-<div class="card item-list" data-category="veg" data-price="mid">
-    <img id="menu_image" src="pictures/masaladosa.png">
-    <h4>Masala Dosa</h4>
-    <p>South Special</p>
-    <h2 class="price">₹250</h2>
-    <button>Buy Now</button>
-</div>
+    <div class="card item-list" data-category="veg" data-price="mid">
+        <img id="menu_image" src="pictures/masaladosa.png">
+        <h3 class="names">Masala Dosa</h3>
+        <p>South Special</p>
+        <h5  class="prices price">₹250</h5>
+        <button class="btnnn" onclick="Openorders(this)">Buy Now</button>
+      <div style="display:none;" class="openn">
+          <button onclick="addToCart(this)">Add to Cart</button>
+          <button onclick="openOrder()">Order Now</button>
+      </div>
+    </div>
 </div>
 </section>
+<div class="order-popup" id="orderPopup">
+  <div class="order-box">
+    <button style="background-color: none;border: none;color:red;margin-left: 95%;font-size: 20px;font-weight:bold;cursor: pointer;"
+    onclick="closeOrder()">✖</button>
+
+    <h2>Order Summary:</h2>
+    <div id="cartItems"></div>
+  </div>
+</div>
+<!-------------------------footer-------------------------------->
+<section id="contact" >  
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h2 class="logo">Food App</h2>
+      <p>Delicious food delivered to your doorstep. Fresh, fast, and affordable.</p>
+    </div>
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Orders</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>Support</h3>
+      <ul>
+        <li><a href="#">Help Center</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>Contact</h3>
+      <p>📍 Hyderabad, India</p>
+      <p>📧 support@foodapp.com</p>
+      <p>📞 +91 98765 43210</p>
+      <div class="socials">
+        <a href="#">🌐</a>
+        <a href="#">📘</a>
+        <a href="#">📸</a>
+      </div>
+    </div>
+  </div>
 <script src="script.js">
 </script>
+<script src="paymnet.js"></script>
 </body>
 </html>

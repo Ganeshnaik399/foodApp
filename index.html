@@ -7,9 +7,13 @@
 <link rel="shortcut icon" href="OIP.jpg" type="image/x-icon">
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<!-- FontAwesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="recommand.css">
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="search.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="login.css">
+
 </head>
 <body>
    <header class="header">
@@ -17,71 +21,26 @@
         <img src="pictures/logo.webp" alt="logo">
         <h1>Food App</h1>
     </div>
-
     <nav class="navbar" id="navbar">
         <span class="close-btn" onclick="toggleMenu()">✖</span>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="#menu">Menu</a></li>
-            <li><a href="#services">Service</a></li>
-            <li><a href="#whyus">Why Us?</a></li>
-            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="service.html">Service</a></li>
+            <li><a href="whyus.html">Why Us?</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
         </ul>
     </nav>
     <!-- Order Button -->
     <div class="order-btn">
-        <a href="#" onclick="openLogin()">
+        <a id="click-btn" onclick="formopen()" href="#">
             <img src="pictures/order.webp" alt="Order Now">
         </a>
     </div>
         <div class="menu-icon" onclick="toggleMenu()">
         ☰
     </div>
-  <!------------form validation--------->
-  <div id="loginPopup" class="popup1" >
-        <span class="close" onclick="closeLogin()">&times;</span>
-        <div class="popup-content1">
-         <div class="flip-container" id="flipCard">
-            <div class="flipper">
-              <div class="front">
-                 <form>
-                    <h2 style="background-color: rgb(102, 241, 241);box-shadow: 2px 6px 2px red; text-shadow: 2px 4px 4px rgb(18, 239, 25); width: 250px; font-weight: bold; font-size: 30px; border-radius: 10px;margin-left: 8px;">LOGIN HERE</h2>
-                    <input type="tel" placeholder="Enter Phone Number" required><br>
-                    <input type="password" placeholder="Enter Password" required><br>
-                     <p>don't Have an account...?<br>
-                      <a href="#" onclick="flipToRegister()">Register here..</a>
-                     </p>
-                 <button type="submit" class="btn logg">Login</button>
-                 <p>Or login with:</p>
-                        <div class="social-icons">
-                            <i class='bx bxl-google'></i>
-                            <i class='bx bxl-facebook'></i>
-                            <i class='bx bxl-twitter'></i>
-                        </div>
-               </form>
-            </div>
-              <!-- Register Form -->
-                <div class="back">
-                    <form action="menu.html">
-                     <span class="back-arrow" onclick="flipToLogin()">&#8592; Back</span>
-                      <h2 style="background-color: rgb(119, 201, 201);box-shadow: 2px 6px 2px red;text-shadow: 2px 2px 5px rgb(18, 239, 25); width: 250px; font-weight: bold; font-size: 30px; border-radius: 10px;margin-left: 10PX;margin-top: 0%;margin-bottom: 2px;margin-bottom: 15px;">REGISTER</h2>
-                        <input type="text" placeholder="Full Name" required>
-                        <input type="email" placeholder="Email" required>
-                        <input type="tel" placeholder="Phone Number" required>
-                        <input type="password" placeholder="Create Password" required>
-                        <button type="submit" class="btn logg">Signup</button>
-                        <p style="margin: 2px;">Or signup with:</p>
-                        <div class="social-icons">
-                            <i class='bx bxl-google'></i>
-                            <i class='bx bxl-facebook'></i>
-                            <i class='bx bxl-twitter'></i>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-     </div>
-    </div>
+    
 </header>
   <main>
     <div class="searchm">
@@ -91,13 +50,37 @@
      </div>
    </div>
    <video 
-    style="width: 100%; height: 300px; object-fit: cover; display: block;" 
+    style="width: 100%; height: 200px; object-fit: cover; display: block;" 
     src="pictures/123629-728697948_tiny.mp4" 
     autoplay 
     muted 
     loop 
     playsinline>
 </video>
+<div class="bodyy">
+<div  id="boxs" class="box">
+       <span id="cancel-btn" onclick="formclose()" class="xbar" id="cancel">X</span>
+    <!-- LOGIN -->
+    <form id="loginForm">
+        <h2>Login</h2>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+        <p class="toggle" onclick="showSignup()">Don't have account? Signup</p>
+    </form>
+
+    <!-- SIGNUP -->
+    <form id="signupForm">
+        <h2>Signup</h2>
+        <input type="text" placeholder="Username" required>
+        <input type="email" placeholder="Email" required>
+        <input type="text" placeholder="Mobile Number" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit href='menu.html'>Signup </button>
+        <p class="toggle" onclick="showLogin()">Already have account? Login</p>
+    </form>
+</div>
+</div>
     <div class="quotes">
         <div class="quotes-text">
             <h1 id="quote1">Meet ,<mark style="background-color: white; color: rgb(214, 64, 14);font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 60px;text-shadow: 1px 4px 1px rgb(29, 44, 6);">Eat</mark> &</h1>
@@ -109,10 +92,19 @@
             food and free HomeDelivery...
             just Order and have it Now
             </pre>
-            <button class="btn_gonow" type="submit"><a href="menu.html">Go Now -></a></button>
+            <button id="click-btn" onclick="formopen()" class="btn_gonow" type="submit"><a href="#menu.html">Go Now -></a></button>
         </div>
         <div class="plate-image"> <img src="pictures/foodplate1.png" alt="foodplate" ></div>
     </div>
+    <div class="order-popup" id="orderPopup">
+  <div class="order-box">
+    <button style="background-color: none;border: none;color:red;margin-left: 95%;font-size: 20px;font-weight:bold;cursor: pointer;"
+    onclick="closeOrder()">✖</button>
+
+    <h2>Order Summary:</h2>
+    <div id="cartItems"></div>
+  </div>
+</div>
     <div class="center_item">
         <h1>Our Special Dish Today</h1>
         <pre>
@@ -216,684 +208,6 @@ in spicy masala gravy.
         </div>
     </div>
   </main>
-  <!-- HERO -->
-   <section id="menu">
-<section class="hero">
-<span style="color: red;text-shadow: 2px 3px 5px black;font-size: 50px;font-weight: bold;"> Explore </span>
- <span style="color: rgb(10, 10, 10);text-shadow: 2px 3px 5px rgb(242, 5, 5);font-size: 30px;font-weight: bold;margin-top:10px;padding: 20px;">Our</span>
-  <span style="color: red;text-shadow: 2px 3px 5px black;font-size: 50px;font-weight: bold;">Menu</span>
-</section>
-
-<!-- FILTER -->
-<div class="filters">
-<button style="padding: 0%;margin: 0%;" class="active" onclick="filterMenu('all')"><img  src="pictures/all.png" alt=""><h4>All</h4></button>
-<button style="padding: 0%;margin: 0%;" onclick="filterMenu('veg', event)"><img  src="pictures/veglogo2.png" alt=""><h4>Veg</h4></button>
-<button style="padding: 5px;margin: 0%;" onclick="filterMenu('nonveg', event)"><img  src="pictures/nonveglogo2.png" alt=""><h4>Non-Veg</h4></button>
-<button style="padding: 0%;margin: 0%;" onclick="filterMenu('mix',event)"><img  src="pictures/mix.png" alt=""><h4>Mix</h4></button>
-</div>
-
-<!-- MENU -->
-  <div class="menu-grid" id="menu">
-      <div class="card item-list" data-category="nonveg" data-price="low">
-            <img id="menu_image" src="pictures/chickenleg.png" alt="">
-            <h3>chicken veg mix</h3>
-            <pre>
- <span>Crunch-Kicks</span>
-    Crispy,
-    breaded chicken strips
-     </pre>
-        <div class="passage"><h5 class="price" >₹450</h5> <button onclick="Openorders(this)">Buy Now</button></div>
-      <div style="display:none;" class="openn">
-       <button onclick="addToCart(this)">Add to Cart</button>
-       <button onclick="openOrder()">Order Now</button>
-     </div>
-    </div>
-    
-<!-- 1 -->
-<div class="card item-list" data-category="veg" data-price="low">
-    <img id="menu_image" src="pictures/burger.png">
-    <h3>Veg Burger</h3>
-    <pre><span>Fresh Bite</span>
-Crispy veg patty with
-fresh lettuce & sauce.
-    </pre>
-    <div class="passage"><h5 class="price">₹200</h5><button onclick="Openorders(this)">Buy Now</button></div>
-      <div style="display:none;" class="openn">
-       <button onclick="addToCart(this)">Add to Cart</button>
-       <button onclick="openOrder()">Order Now</button>
-     </div>
-</div>
-
-<!-- 2 -->
-<div class="card item-list" data-category="veg" data-price="mid">
-    <img id="menu_image" src="pictures/paneer.png">
-    <h3>Paneer Butter Masala</h3>
-    <pre><span>Rich Curry</span>
-Soft paneer cubes in
-creamy tomato gravy.
-    </pre>
-    <div class="passage"><h5 class="price">₹350</h5><button onclick="Openorders(this)">Buy Now</button></div>
-      <div style="display:none;" class="openn">
-       <button onclick="addToCart(this)">Add to Cart</button>
-       <button onclick="openOrder()">Order Now</button>
-     </div>
-</div>
-
-<!-- 3 -->
-<div class="card item-list" data-category="veg" data-price="high">
-    <img id="menu_image" src="pictures/foodplate.jpg">
-    <h3>Veg Thali</h3>
-    <pre><span>Full Meal</span>
-Complete meal with
-roti, rice & curries.
-    </pre>
-    <div class="passage"><h5 class="price">₹550</h5><button onclick="Openorders(this)">Buy Now</button></div>
-      <div style="display:none;" class="openn">
-       <button onclick="addToCart(this)">Add to Cart</button>
-       <button onclick="openOrder()">Order Now</button>
-     </div>
-</div>
-
-<!-- 4 -->
-<div class="card item-list" data-category="nonveg" data-price="low">
-    <img id="menu_image" src="pictures/chickennugget.jpg">
-    <h3>Chicken Nuggets</h3>
-    <pre><span>Crunchy Bites</span>
-Golden fried chicken
-snack with dip.
-    </pre>
-    <div class="passage"><h5 class="price">₹250</h5><button onclick="Openorders(this)">Buy Now</button></div>
-      <div style="display:none;" class="openn">
-       <button onclick="addToCart(this)">Add to Cart</button>
-       <button onclick="openOrder()">Order Now</button>
-     </div>
-</div>
-
-<!-- 5 -->
-<div class="card item-list" data-category="nonveg" data-price="mid">
-    <img id="menu_image" src="pictures/foodplate1.png">
-    <h3>Chicken Biryani</h3>
-    <pre><span>Spicy Aroma</span>
-Flavorful rice with
-tender chicken pieces.
-    </pre>
-    <div class="passage"><h5 class="price">₹450</h5><button onclick="Openorders(this)">Buy Now</button></div>
-      <div style="display:none;" class="openn">
-       <button onclick="addToCart(this)">Add to Cart</button>
-       <button onclick="openOrder()">Order Now</button>
-     </div>
-</div>
-
-<!-- 6 -->
-<div class="card item-list" data-category="nonveg" data-price="high">
-    <img id="menu_image" src="pictures/grilledchicken.jpg">
-    <h3>Grilled Chicken</h3>
-    <pre><span>Smoky Taste</span>
-Juicy grilled chicken
-with herbs & spices.
-    </pre>
-    <div class="passage"><h5 class="price">₹650</h5><button onclick="Openorders(this)">Buy Now</button></div>
-      <div style="display:none;" class="openn">
-       <button onclick="addToCart(this)">Add to Cart</button>
-       <button onclick="openOrder()">Order Now</button>
-     </div>
-</div>
-
-<!-- 7 -->
-<div class="card item-list" data-category="mix" data-price="low">
-    <img id="menu_image" src="pictures/vegchicken.jpg">
-    <h3>Veg + Chicken Wrap</h3>
-    <pre><span>Combo Wrap</span>
-Mix of veg & chicken
-in soft tortilla.
-    </pre>
-    <div class="passage"><h5 class="price">₹280</h5><button onclick="Openorders(this)">Buy Now</button></div>
-      <div style="display:none;" class="openn">
-       <button onclick="addToCart(this)">Add to Cart</button>
-       <button onclick="openOrder()">Order Now</button>
-     </div>
-</div>
-
-<!-- 8 -->
-<div class="card item-list" data-category="mix" data-price="mid">
-    <img id="menu_image" src="pictures/OIP.jpg">
-    <h3>Combo Meal</h3>
-    <pre><span>Best Combo</span>
-Burger, fries &
-chicken bites.
-    </pre>
-    <div class="passage"><h5 class="price">₹480</h5><button onclick="Openorders(this)">Buy Now</button></div>
-      <div style="display:none;" class="openn">
-       <button onclick="addToCart(this)">Add to Cart</button>
-       <button onclick="openOrder()">Order Now</button>
-     </div>
-</div>
-
-<!-- 9 -->
-<div class="card item-list" data-category="mix" data-price="high">
-    <img id="menu_image" src="pictures/familypack.webp">
-    <h3>Family Pack</h3>
-    <pre><span>Big Feast</span>
-Veg + non-veg full
-family meal combo.
-    </pre>
-    <div class="passage"><h5 class="price">₹750</h5><button onclick="Openorders(this)">Buy Now</button></div>
-      <div style="display:none;" class="openn">
-       <button onclick="addToCart(this)">Add to Cart</button>
-       <button onclick="openOrder()">Order Now</button>
-     </div>
-</div>
-
-<!-- 10 -->
-<div class="card item-list" data-category="veg" data-price="mid">
-    <img id="menu_image" src="pictures/fizza.jpg">
-    <h3>Veg Pizza</h3>
-    <pre><span>Cheesy Delight</span>
-Loaded with fresh
-veggies & cheese.
-    </pre>
-    <div class="passage"><h5 class="price">₹400</h5><button onclick="Openorders(this)">Buy Now</button></div>
-      <div style="display:none;" class="openn">
-       <button onclick="addToCart(this)">Add to Cart</button>
-       <button onclick="openOrder()">Order Now</button>
-     </div>
-</div>
-<!-- 11 -->
-<div class="card item-list" data-category="veg" data-price="low">
-    <img id="menu_image" src="pictures/samosa.jpg">
-    <h3>Samosa</h3>
-    <pre><span>Street Snack</span>
-Crispy fried snack
-filled with spicy potato.
-    </pre>
-    <div class="passage"><h5 class="price">₹100</h5><button onclick="Openorders(this)">Buy Now</button></div>
-      <div style="display:none;" class="openn">
-       <button onclick="addToCart(this)">Add to Cart</button>
-       <button onclick="openOrder()">Order Now</button>
-     </div>
-</div>
-
-<!-- 12 -->
-<div class="card item-list" data-category="veg" data-price="mid">
-    <img id="menu_image" src="pictures/noodles.jpg">
-    <h3>Veg Noodles</h3>
-    <pre><span>Quick Meal</span>
-Stir-fried noodles
-with fresh vegetables.
-    </pre>
-    <div class="passage"><h5 class="price">₹300</h5><button onclick="Openorders(this)">Buy Now</button></div>
-      <div style="display:none;" class="openn">
-       <button onclick="addToCart(this)">Add to Cart</button>
-       <button onclick="openOrder()">Order Now</button>
-     </div>
-</div>
-
-<!-- 13 -->
-<div class="card item-list" data-category="veg" data-price="high">
-    <img id="menu_image" src="pictures/paneercombo.jpg">
-    <h3>Paneer Combo</h3>
-    <pre><span>Deluxe Plate</span>
-Paneer dish with roti,
-rice & salad combo.
-    </pre>
-    <div class="passage"><h5 class="price">₹600</h5><button onclick="Openorders(this)">Buy Now</button></div>
-      <div style="display:none;" class="openn">
-       <button onclick="addToCart(this)">Add to Cart</button>
-       <button onclick="openOrder()">Order Now</button>
-     </div>
-</div>
-
-<!-- 14 -->
-<div class="card item-list" data-category="nonveg" data-price="low">
-    <img id="menu_image" src="pictures/eggroll.jpg">
-    <h3>Egg Roll</h3>
-    <pre><span>Quick Bite</span>
-Soft roll filled with
-egg & spicy sauce.
-    </pre>
-    <div class="passage"><h5 class="price">₹150</h5><button onclick="Openorders(this)">Buy Now</button></div>
-      <div style="display:none;" class="openn">
-       <button onclick="addToCart(this)">Add to Cart</button>
-       <button onclick="openOrder()">Order Now</button>
-     </div>
-</div>
-
-<!-- 15 -->
-<div class="card item-list" data-category="nonveg" data-price="mid">
-    <img id="menu_image" src="pictures/friedchicken.jpg">
-    <h3>Fried Chicken</h3>
-    <pre><span>Crispy Treat</span>
-Deep fried chicken
-with crunchy coating.
-    </pre>
-    <div class="passage"><h5 class="price">₹400</h5><button onclick="Openorders(this)">Buy Now</button></div>
-      <div style="display:none;" class="openn">
-       <button onclick="addToCart(this)">Add to Cart</button>
-       <button onclick="openOrder()">Order Now</button>
-     </div>
-</div>
-
-<!-- 16 -->
-<div class="card item-list" data-category="nonveg" data-price="high">
-    <img id="menu_image" src="pictures/muttoncurry.png">
-    <h3>Mutton Curry</h3>
-    <pre><span>Rich Flavor</span>
-Tender mutton cooked
-in spicy masala gravy.
-    </pre>
-    <div class="passage"><h5 class="price">₹700</h5><button onclick="Openorders(this)">Buy Now</button></div>
-      <div style="display:none;" class="openn">
-       <button onclick="addToCart(this)">Add to Cart</button>
-       <button onclick="openOrder()">Order Now</button>
-     </div>
-</div>
-
-<!-- 17 -->
-<div class="card item-list" data-category="mix" data-price="low">
-    <img id="menu_image" src="pictures/mixsandwich.png">
-    <h3>Mix Sandwich</h3>
-    <pre><span>Fusion Bite</span>
-Veg & chicken layered
-grilled sandwich.
-    </pre>
-    <div class="passage"><h5 class="price">₹220</h5><button onclick="Openorders(this)">Buy Now</button></div>
-      <div style="display:none;" class="openn">
-       <button onclick="addToCart(this)">Add to Cart</button>
-       <button onclick="openOrder()">Order Now</button>
-     </div>
-</div>
-
-<!-- 18 -->
-<div class="card item-list" data-category="mix" data-price="mid">
-    <img id="menu_image" src="pictures/snackbox.jpg">
-    <h3>Snack Combo</h3>
-    <pre><span>Snack Box</span>
-Fries, nuggets &
-veg rolls combo.
-    </pre>
-    <div class="passage"><h5 class="price">₹420</h5><button onclick="Openorders(this)">Buy Now</button></div>
-      <div style="display:none;" class="openn">
-       <button onclick="addToCart(this)">Add to Cart</button>
-       <button onclick="openOrder()">Order Now</button>
-     </div>
-</div>
-
-<!-- 19 -->
-<div class="card item-list" data-category="mix" data-price="high">
-    <img id="menu_image" src="pictures/partymeal.jpg">
-    <h3>Party Meal</h3>
-    <pre><span>Group Feast</span>
-Large combo for 4
-with veg & non-veg.
-    </pre>
-    <div class="passage"><h5 class="price">₹900</h5><button onclick="Openorders(this)">Buy Now</button></div>
-      <div style="display:none;" class="openn">
-       <button onclick="addToCart(this)">Add to Cart</button>
-       <button onclick="openOrder()">Order Now</button>
-     </div>
-</div>
-
-<!-- 20 -->
-<div class="card item-list" data-category="veg" data-price="mid">
-    <img id="menu_image" src="pictures/masaladosa.png">
-    <h3>Masala Dosa</h3>
-    <pre><span>South Special</span>
-Crispy dosa filled
-with potato masala.
-    </pre>
-    <div class="passage"><h5 class="price">₹250</h5><button onclick="Openorders(this)">Buy Now</button></div>
-      <div style="display:none;" class="openn">
-       <button onclick="addToCart(this)">Add to Cart</button>
-       <button onclick="openOrder()">Order Now</button>
-     </div>
-</div>
-</div>
-<section class="price-filter-section">
-    <h2 style="text-align:center;">Filter by Price</h2>
-
-    <div class="filters ">
-        <button onclick="filterPrice('all')">All</button>
-        <button onclick="filterPrice('low')">Below ₹300</button>
-        <button onclick="filterPrice('mid')">₹300 - ₹500</button>
-        <button onclick="filterPrice('high')">Above ₹500</button>
-    </div>
-
-    <div class="menu-grid price" id="price-menu">
-
-
-<!-- 1 -->
-   <div class="card item-list" data-category="nonveg" data-price="low">
-    <img class="menu_image" src="pictures/chickenleg.png">
-    <h4>Chicken Strips</h4>
-    <p>Crispy & crunchy bites</p>
-    <h2 class="price">₹250</h2>
-    <button class="btnnn" onclick="Openorders(this)">Buy Now</button>
-      <div style="display:none;" class="openn">
-       <button onclick="addToCart(this)">Add to Cart</button>
-       <button onclick="openOrder()">Order Now</button>
-     </div>
-</div>
-
-<!-- 2 -->
-<div class="card item-list" data-category="veg" data-price="low">
-    <img class="menu_image" src="pictures/burger.png">
-    <h4>Veg Burger</h4>
-    <p>Yummy & tasty snack</p>
-    <h2 class="price">₹200</h2>
-     <button class="btnnn" onclick="Openorders(this)">Buy Now</button>
-      <div style="display:none;" class="openn">
-       <button onclick="addToCart(this)">Add to Cart</button>
-       <button onclick="openOrder()">Order Now</button>
-</div>
-
-<!-- 3 -->
-<div class="card item-list" data-category="veg" data-price="mid">
-    <img class="menu_image" src="pictures/paneer.png">
-    <h4>Paneer Masala</h4>
-    <p>Rich creamy gravy</p>
-    <h2 class="price">₹350</h2>
-    <button class="btnnn" onclick="Openorders(this)">Buy Now</button>
-      <div style="display:none;" class="openn">
-       <button onclick="addToCart(this)">Add to Cart</button>
-       <button onclick="openOrder()">Order Now</button>
-</div>
-
-<!-- 4 -->
-<div class="card item-list" data-category="veg" data-price="high">
-    <img class="menu_image" src="pictures/foodplate.jpg">
-    <h4>Veg Thali</h4>
-    <p>Complete full meal</p>
-    <h2 class="price">₹550</h2>
-    <button class="btnnn" onclick="Openorders(this)">Buy Now</button>
-      <div style="display:none;" class="openn">
-       <button onclick="addToCart(this)">Add to Cart</button>
-       <button onclick="openOrder()">Order Now</button>
-</div>
-
-<!-- 5 -->
-<div class="card item-list" data-category="nonveg" data-price="low">
-    <img class="menu_image" src="pictures/chickennugget.jpg">
-    <h4>Chicken Nuggets</h4>
-    <p>Crunchy fried snack</p>
-    <h2 class="price">₹250</h2>
-     <button class="btnnn" onclick="Openorders(this)">Buy Now</button>
-      <div style="display:none;" class="openn">
-       <button onclick="addToCart(this)">Add to Cart</button>
-       <button onclick="openOrder()">Order Now</button>
-</div>
-
-<!-- 6 -->
-<div class="card item-list" data-category="nonveg" data-price="mid">
-    <img class="menu_image" src="pictures/foodplate1.png">
-    <h4>Chicken Biryani</h4>
-    <p>Spicy flavorful rice</p>
-    <h2 class="price">₹450</h2>
-    <button class="btnnn" onclick="Openorders(this)">Buy Now</button>
-      <div style="display:none;" class="openn">
-       <button onclick="addToCart(this)">Add to Cart</button>
-       <button onclick="openOrder()">Order Now</button>
-</div>
-
-<!-- 7 -->
-<div class="card item-list" data-category="nonveg" data-price="high">
-    <img class="menu_image" src="pictures/grilledchicken.jpg">
-    <h4>Grilled Chicken</h4>
-    <p>Juicy smoky taste</p>
-    <h2 class="price">₹650</h2>
-    <button class="btnnn" onclick="Openorders(this)">Buy Now</button>
-      <div style="display:none;" class="openn">
-       <button onclick="addToCart(this)">Add to Cart</button>
-       <button onclick="openOrder()">Order Now</button>
-</div>
-
-<!-- 8 -->
-<div class="card item-list" data-category="mix" data-price="low">
-    <img class="menu_image" src="pictures/vegchicken.jpg">
-    <h4>Veg Chicken Wrap</h4>
-    <p>Perfect combo wrap</p>
-    <h2 class="price">₹280</h2>
-    <button class="btnnn" onclick="Openorders(this)">Buy Now</button>
-      <div style="display:none;" class="openn">
-       <button onclick="addToCart(this)">Add to Cart</button>
-       <button onclick="openOrder()">Order Now</button>
-</div>
-
-<!-- 9 -->
-<div class="card item-list" data-category="mix" data-price="mid">
-    <img class="menu_image" src="pictures/OIP.jpg">
-    <h4>Combo Meal</h4>
-    <p>Burger + fries combo</p>
-    <h2 class="price">₹480</h2>
-    <button class="btnnn" onclick="Openorders(this)">Buy Now</button>
-      <div style="display:none;" class="openn">
-       <button onclick="addToCart(this)">Add to Cart</button>
-       <button onclick="openOrder()">Order Now</button>
-</div>
-
-<!-- 10 -->
-<div class="card item-list" data-category="mix" data-price="high">
-    <img class="menu_image" src="pictures/familypack.webp">
-    <h4>Family Pack</h4>
-    <p>Big meal for family</p>
-    <h2 class="price">₹750</h2>
-    <button class="btnnn" onclick="Openorders(this)">Buy Now</button>
-      <div style="display:none;" class="openn">
-       <button onclick="addToCart(this)">Add to Cart</button>
-       <button onclick="openOrder()">Order Now</button>
-</div>
-<!-- 11 -->
-<div class="card item-list" data-category="veg" data-price="low">
-    <img id="menu_image" src="pictures/samosa.jpg">
-    <h4>Samosa</h4>
-    <p>Street Snack</p>
-    <h2 class="price">₹100</h2>
-    <button class="btnnn" onclick="Openorders(this)">Buy Now</button>
-      <div style="display:none;" class="openn">
-       <button onclick="addToCart(this)">Add to Cart</button>
-       <button onclick="openOrder()">Order Now</button>
-</div>
-
-<!-- 12 -->
-<div class="card item-list" data-category="veg" data-price="mid">
-    <img id="menu_image" src="pictures/noodles.jpg">
-    <h4>Veg Noodles</h4>
-    <p>Quick Meal</p>>
-   <h2 class="price">₹300</h2>
-     <button class="btnnn" onclick="Openorders(this)">Buy Now</button>
-      <div style="display:none;" class="openn">
-       <button onclick="addToCart(this)">Add to Cart</button>
-       <button onclick="openOrder()">Order Now</button>
-</div>
-
-<!-- 13 -->
-<div class="card item-list" data-category="veg" data-price="high">
-    <img id="menu_image" src="pictures/paneercombo.jpg">
-    <h4>Paneer Combo</h4>
-    <p>Deluxe Plate</p>
-    <h2 class="price">₹600</h2>
-    <button class="btnnn" onclick="Openorders(this)">Buy Now</button>
-      <div style="display:none;" class="openn">
-       <button onclick="addToCart(this)">Add to Cart</button>
-       <button onclick="openOrder()">Order Now</button>
-</div>
-
-<!-- 14 -->
-<div class="card item-list" data-category="nonveg" data-price="low">
-    <img id="menu_image" src="pictures/eggroll.jpg">
-    <h4>Egg Roll</h4>
-    <p>Quick Bite</p>
-    <h2 class="price">₹150</h2>
-    <button class="btnnn" onclick="Openorders(this)">Buy Now</button>
-      <div style="display:none;" class="openn">
-       <button onclick="addToCart(this)">Add to Cart</button>
-       <button onclick="openOrder()">Order Now</button>
-</div>
-
-<!-- 15 -->
-<div class="card item-list" data-category="nonveg" data-price="mid">
-    <img id="menu_image" src="pictures/friedchicken.jpg">
-    <h4>Fried Chicken</h4>
-    <p>Crispy Treat</p>
-    <h2 class="price">₹400</h2>
-    <button class="btnnn" onclick="Openorders(this)">Buy Now</button>
-      <div style="display:none;" class="openn">
-       <button onclick="addToCart(this)">Add to Cart</button>
-       <button onclick="openOrder()">Order Now</button>
-</div>
-
-<!-- 16 -->
-<div class="card item-list" data-category="nonveg" data-price="high">
-    <img id="menu_image" src="pictures/muttoncurry.png">
-    <h4>Mutton Curry</h4>
-    <p>Rich Flavor</p>
-   <h2 class="price">₹700</h2>
-    <button class="btnnn" onclick="Openorders(this)">Buy Now</button>
-      <div style="display:none;" class="openn">
-       <button onclick="addToCart(this)">Add to Cart</button>
-       <button onclick="openOrder()">Order Now</button>
-</div>
-
-<!-- 17 -->
-<div class="card item-list" data-category="mix" data-price="low">
-    <img id="menu_image" src="pictures/mixsandwich.png">
-    <h4>Mix Sandwich</h4>
-    <p>Fusion Bite</p>
-    <h2 class="price">₹220</h2>
-    <button class="btnnn" onclick="Openorders(this)">Buy Now</button>
-      <div style="display:none;" class="openn">
-       <button onclick="addToCart(this)">Add to Cart</button>
-       <button onclick="openOrder()">Order Now</button>
-</div>
-
-<!-- 18 -->
-<div class="card item-list" data-category="mix" data-price="mid">
-    <img id="menu_image" src="pictures/snackbox.jpg">
-    <h4>Snack Combo</h4>
-    <p><span>Snack Box</p>
-    <h2 class="price">₹420</h2>
-    <button class="btnnn" onclick="Openorders(this)">Buy Now</button>
-      <div style="display:none;" class="openn">
-       <button onclick="addToCart(this)">Add to Cart</button>
-       <button onclick="openOrder()">Order Now</button>
-</div>
-
-<!-- 19 -->
-<div class="card item-list" data-category="mix" data-price="high">
-    <img id="menu_image" src="pictures/partymeal.jpg">
-    <h4>Party Meal</h4>
-    <p>Group Feast</p>
-<h2 class="price">₹900</h2>
-    <button class="btnnn" onclick="Openorders(this)">Buy Now</button>
-      <div style="display:none;" class="openn">
-       <button onclick="addToCart(this)">Add to Cart</button>
-       <button onclick="openOrder()">Order Now</button>
-</div>
-
-<!-- 20 -->
-<div class="card item-list" data-category="veg" data-price="mid">
-    <img id="menu_image" src="pictures/masaladosa.png">
-    <h4>Masala Dosa</h4>
-    <p>South Special</p>
-    <h2 class="price">₹250</h2>
-     <button class="btnnn" onclick="Openorders(this)">Buy Now</button>
-      <div style="display:none;" class="openn">
-       <button onclick="addToCart(this)">Add to Cart</button>
-       <button onclick="openOrder()">Order Now</button>
-</div>
-</div>
-</section>
-</section>
-<div class="order-popup" id="orderPopup">
-  <div class="order-box">
-    <button style="background-color: none;border: none;color:red;margin-left: 95%;font-size: 20px;font-weight:bold;cursor: pointer;"
-    onclick="closeOrder()">✖</button>
-
-    <h2>Order Summary:</h2>
-    <div id="cartItems"></div>
-  </div>
-</div>
-  <!-------SERVICES-------------------->
-  <!-- HERO -->
-   <section id="services">
-<section class="hero1">
-    <h1>Our Premium Services</h1>
-    <p>Experience quality, speed, and reliability like never before Food Delivery App. It’s no surprise that a food delivery app is on this list. It’s a huge trend right now, and for good reason – people love ordering food, and they do it a lot.
-Restaurant POS Apps.</p>
-</section>
-
-<!-- SERVICES -->
-<section class="services">
-    <h2>What We Offer</h2>
-
-    <div class="grid">
-
-        <div class="card1 hidden">
-            <i class="fas fa-shipping-fast"></i>
-            <h3>Fast Delivery</h3>
-            <p>Get your food delivered within 30 minutes or it's on us!</p>
-        </div>
-
-        <div class="card1 hidden">
-            <i class="fas fa-leaf"></i>
-            <h3>Fresh Ingredients</h3>
-            <p>We source fresh ingredients from local organic farms daily.</p>
-        </div>
-            <div class="card1 hidden">
-            <i class="fa-solid fa-certificate"></i>
-            <h3>GUarentee Replacement</h3>
-            <p>If it is dameged or any wrong product delivered with ZERO cost</p>
-        </div>
-                <div class="card1 hidden">
-            <i class="fa-solid fa-users-line"></i>
-            <h3>Membership Vochers</h3>
-            <p>Pay easily using UPI, Cards, Wallets, or Cash on Delivery.</p>
-        </div>
-
-        <div class="card1 hidden">
-            <i class="fas fa-headset"></i>
-            <h3>24/7 Support</h3>
-            <p>Our customer care team is available anytime to assist you.</p>
-        </div>
-
-        <div class="card1 hidden">
-            <i class="fas fa-credit-card"></i>
-            <h3>Easy Payments</h3>
-            <p>Pay easily using UPI, Cards, Wallets, or Cash on Delivery.</p>
-        </div>
-
-    </div>
-</section>
-</section>
-<!---------------------why us ?------------->
-<section id="whyus" class="why-us">
-
-  <h2>Why Choose Us?</h2>
-
-  <div class="why-container">
-
-    <div class="why-card">
-      <h3>🍔 Fresh Food</h3>
-      <p>We serve freshly prepared meals with high-quality ingredients every day.</p>
-    </div>
-
-    <div class="why-card">
-      <h3>⚡ Fast Delivery</h3>
-      <p>Quick and reliable delivery to your doorstep in minutes.</p>
-    </div>
-
-    <div class="why-card">
-      <h3>💰 Affordable Prices</h3>
-      <p>Delicious food at budget-friendly prices for everyone.</p>
-    </div>
-
-    <div class="why-card">
-      <h3>⭐ Best Quality</h3>
-      <p>Maintaining top quality standards for taste and hygiene.</p>
-    </div>
-
-  </div>
-
-</section>
 <!----------FOOTERRRRRRRRRRRRRRRRRRRRRRRRRR------------------->
 <section id="contact" >  
 <footer class="footer">
@@ -924,7 +238,6 @@ Restaurant POS Apps.</p>
       <p>📍 Hyderabad, India</p>
       <p>📧 support@foodapp.com</p>
       <p>📞 +91 98765 43210</p>
-
       <div class="socials">
         <a href="#">🌐</a>
         <a href="#">📘</a>
@@ -933,7 +246,6 @@ Restaurant POS Apps.</p>
     </div>
   </div>
     <script src="script.js"></script>
-    <script>
-</script>
+    <script src="paymnet.js"></script>
 </body>
 </html>

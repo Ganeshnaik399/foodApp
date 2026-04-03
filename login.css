@@ -1,0 +1,65 @@
+.bodyy{
+   display: flex;
+   margin-left: 30%;
+   margin-top: -20%;
+    justify-content:center;
+    align-items:center;
+    position: fixed;
+}
+.box{
+    display: none;
+    background:rgb(32, 31, 31);
+    padding:30px;
+    border-radius:15px;
+    width:350px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+.xbar{
+    margin-left: 95%;
+    color: red;
+    cursor: pointer;
+    font-weight: bold;
+
+}
+.xbar:hover{
+     font-size: 20px;
+     font-weight: bold;
+}
+h2{
+    text-align:center;
+    color: rgb(250, 248, 246);
+    text-decoration: underline rgb(244, 3, 3);
+}
+
+input{
+    width:100%;
+    padding:10px;
+    margin:8px 0;
+    border-radius:8px;
+    border:1px solid #ccc;
+}
+
+button{
+    width:100%;
+    padding:10px;
+    background:#ff6b6b;
+    border:none;
+    color:white;
+    border-radius:8px;
+    cursor:pointer;
+}
+button:hover{
+    background:#ff4b4b;
+}
+
+.toggle{
+    text-align:center;
+    margin-top:10px;
+    cursor:pointer;
+    color:blue;
+}
+
+/* hide signup initially */
+#signupForm{
+    display:none;
+}

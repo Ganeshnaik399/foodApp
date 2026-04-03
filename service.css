@@ -1,0 +1,88 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~SERVICES~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.hero1 {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('foodplate1.png');
+    background-size: cover;
+    color: white;
+    margin-top: 10%;
+}
+
+.hero1 h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+/* SERVICES GRID */
+.services {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.services h2 {
+    margin-bottom: 40px;
+    color: #1c1c1c;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* CARD */
+.card1 {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.card1 i {
+    font-size: 40px;
+    color: #FF4500;
+    margin-bottom: 15px;
+}
+
+.card1 h3 {
+    margin-bottom: 10px;
+}
+
+.card1 p {
+    color: #555;
+}
+
+/* HOVER EFFECT */
+.card1:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* ANIMATION */
+.card1.hidden {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.card1.show {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.6s ease;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
