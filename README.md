@@ -12,8 +12,8 @@ This project provides a clean UI for browsing food items, viewing details, and i
 - User-friendly UI/UX  
 - Browse food items with images  
 - Display food name, location, and details  
-- Add to cart functionality (if implemented)  
-- Search & filter options (if added)  
+- Add to cart functionality 
+- Search & filter options (Currently working on it) 
 - Fully responsive design  
 
 ---
@@ -44,7 +44,6 @@ This project provides a clean UI for browsing food items, viewing details, and i
 
 [![Watch Demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://youtube.com/watch?v=YOUR_VIDEO_ID)
 
-> Replace `YOUR_VIDEO_ID` with your uploaded video
 
 ---
 
@@ -53,7 +52,7 @@ This project provides a clean UI for browsing food items, viewing details, and i
 - HTML5
 - CSS3
 - JavaScript
-
+-flask (for backend working on it)
 
 ---
 ```
@@ -67,10 +66,6 @@ foodApp/
 ├── assets/
 │ ├── images/
 │ └── icons/
-│
-├── components/ # (if React)
-├── pages/ # (if React)
-│
 ├── screenshots/
 │
 └── README.md
@@ -84,7 +79,7 @@ foodApp/
 2️ Homepage displays food items  
 3️ User browses or searches food  
 4️ Click on item → view details  
-5️ Add to cart / interact (if available)  
+5️ Add to cart / interact  
 6️ UI updates dynamically  
 
 ---
