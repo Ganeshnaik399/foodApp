@@ -25,7 +25,7 @@
      font-size: 20px;
      font-weight: bold;
 }
-h2{
+#logg{
     text-align:center;
     color: rgb(250, 248, 246);
     text-decoration: underline rgb(244, 3, 3);
@@ -38,16 +38,6 @@ input{
     border-radius:8px;
     border:1px solid #ccc;
 }
-
-button{
-    width:100%;
-    padding:10px;
-    background:#ff6b6b;
-    border:none;
-    color:white;
-    border-radius:8px;
-    cursor:pointer;
-}
 button:hover{
     background:#ff4b4b;
 }
@@ -58,7 +48,6 @@ button:hover{
     cursor:pointer;
     color:blue;
 }
-
 /* hide signup initially */
 #signupForm{
     display:none;
